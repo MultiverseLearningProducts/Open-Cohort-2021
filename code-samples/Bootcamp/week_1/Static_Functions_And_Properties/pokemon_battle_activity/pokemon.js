@@ -1,8 +1,5 @@
 class Pokemon {
 
-    //reveal this last
-    static pokemons = []
-  
     constructor(name, number, type, hp){
       this.name = name
       this.number = number
@@ -36,12 +33,7 @@ class Pokemon {
       this.type = type
     }
     
-    checkName(name) {
-      return typeof this.name === 'string'
-    }
   
-  }
-
+}
 
 module.exports = Pokemon
-
