@@ -3,9 +3,10 @@ import fetch from 'node-fetch'
 let caughtPokemon = {}
 
 
-function getRandomPokemon(num) {
+function getRandomPokemon() {
+    let num = Math.floor(Math.random() * 151)
     return fetch(`https://pokeapi.co/api/v2/pokemon/${num}`).then((res) => {
-        return res.json()
+        return res.json() //JSON -> JS Object
     }).then((data) => {
         return data.forms
     }).catch(() => {    
@@ -14,9 +15,12 @@ function getRandomPokemon(num) {
 }
 
 function catchEm(pokemon, pokeball) {
+
     return new Promise((resolve, reject) => {
+
         let probOfCatching = Math.floor(Math.random() * 100)
         console.log('MY CHANCE:', probOfCatching, pokeball)
+
         if(pokeball === 'MasterBall') {
             if(probOfCatching <= 75) {
                 resolve(pokemon)
@@ -24,6 +28,7 @@ function catchEm(pokemon, pokeball) {
                 reject()
             }
         }
+
         if(pokeball === 'pokeball') {
             if(probOfCatching <= 25) {
                 resolve(pokemon)
@@ -35,6 +40,7 @@ function catchEm(pokemon, pokeball) {
 }
 
 function pokeDex(pokemon) {
+    
     if(caughtPokemon[pokemon.name]) {
         let info = pokemon
         console.log(`you've caught ${caughtPokemon[pokemon.name]} of ${pokemon.name}, here is some information about this pokemon: ${info}`)
@@ -42,11 +48,11 @@ function pokeDex(pokemon) {
 }
 
 
-let testPokemon = getRandomPokemon(25)
+let testPokemon = getRandomPokemon()
 
 
 catchEm(testPokemon, 'pokeball').then((pokemon) => {
-    let pokemonName = pokemon[0].name
+    let pokemonName = pokemon[0].name 
     console.log(`You caught: ${pokemonName}`)
     if(caughtPokemon[pokemonName]) {
         caughtPokemon[pokemonName]++
