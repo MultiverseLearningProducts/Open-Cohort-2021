@@ -14,7 +14,6 @@ function getRandomPokemon(num) {
 }
 
 function catchEm(pokemon, pokeball) {
-
     return new Promise((resolve, reject) => {
         let probOfCatching = Math.floor(Math.random() * 100)
         console.log('MY CHANCE:', probOfCatching, pokeball)
@@ -32,8 +31,7 @@ function catchEm(pokemon, pokeball) {
                 reject()
             }
         }
-    })
-    
+    })   
 }
 
 function pokeDex(pokemon) {
@@ -62,5 +60,5 @@ catchEm(testPokemon, 'pokeball').then((pokemon) => {
 
 pokeDex(testPokemon)
 
-
+//getRandomPokemon(num) -> will return data.forms
 
