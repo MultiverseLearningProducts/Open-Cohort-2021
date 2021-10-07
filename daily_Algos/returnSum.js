@@ -6,3 +6,19 @@
 // It does not matter what you leave beyond the returned k (hence they are underscores).
 
 // Use the two pointer method!
+
+function deleteDupes(arr) {
+  let p1 = 0
+  let p2 = 1
+  let counter = 0
+
+  while(p2 < arr.length) {
+    if(arr[p2] !== arr[p1]) {
+      p1++
+      arr[p1] = arr[p2]
+      counter++
+    }
+    p2++
+  }
+  return arr.slice(0,counter+1)
+}
