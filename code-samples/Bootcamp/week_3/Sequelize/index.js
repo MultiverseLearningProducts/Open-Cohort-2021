@@ -11,4 +11,4 @@ Game.belongsTo(User) //creates a foreign key on the Game table that indicates th
 User.hasMany(Game)
 
 //export the models with these associations
-module.exports = { Game, User }
+module.exports = { Game , User }

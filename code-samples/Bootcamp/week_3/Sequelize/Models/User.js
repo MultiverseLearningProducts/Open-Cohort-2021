@@ -9,13 +9,11 @@ class User extends Model {
 User.init({
 
     username: DataTypes.STRING,
-    //gamesCollected: DataTypes.ENUM // cannot use .ARRAY (our current sql dialect is sqlite) 
+    gamesCollected: DataTypes.STRING 
 
     }, {
         sequelize: db
 })
 
 
-module.exports = {
-    User
-}
+module.exports = { User }
