@@ -1,12 +1,18 @@
-//imports
+//import our db, Model, DataTypes
+const { db, DataTypes, Model } = require('../db')
 
+//Creating a User child class from the Model parent class
+class User extends Model {
 
+}
 
-//child class
+User.init({
 
+    username: DataTypes.STRING,
 
-//create model
+    }, {
+        sequelize: db
+})
 
-
-
-//export
+//exports
+module.exports = { User }
