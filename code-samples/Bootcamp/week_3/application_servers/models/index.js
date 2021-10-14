@@ -1,12 +1,12 @@
 //imports
 const { db, DataTypes, Model } = require('../db') // ../ because we are inside the models folder
 
-const { Music } = require('./models/Music')
-const { User } = require('./models/User')
+const { Music } = require('./Music')
+const { User } = require('./User')
 
 //associations
 
-Music.belongsTo(User)
+Music.belongsTo(User) //fk userID
 User.hasMany(Music)
 
 

@@ -5,22 +5,17 @@ const PORT = 3000
 
 //import seed function
 const seed = require('./seed')
-
+const { db } = require('./db') //import our db
+const { Music } = require('./models/index') // import our associated model 
 
 //start the server, we run the seed function to generate data into our database
 seed()
 
-//routes
- // request URL // 1. absorb the request 2. response -> 
-app.get('/', (req, res) => {
-    res.send(`<h1>HELLO WORLD!!!!</h1>`)
+//*************** ROUTES ******************//
+app.get('/allMusic', async (req, res) => {
+    let allSongs = await Music.findAll()  // SELECT * FROM MUSIC
+    res.json({allSongs})
 })
-
-app.get('/test', (req, res) => {
-    res.send(`<img src="https://www.destructoid.com/wp-content/uploads/2020/12/182088-chocobo.jpg">`)
-})
-
-//1. html 2.img 3.link to another page
 
 app.listen( PORT, () => {
     console.log(` Your server is now listening to port ${PORT}`)
