@@ -7,7 +7,7 @@ const cors = require('cors')
 //imports from your db
 const seed = require('./seed')
 const { db } = require('./db')
-const { Music } = require('./models/index')
+const { Music, User } = require('./models/index')
 
 
 //invoke our seed function
@@ -28,6 +28,11 @@ app.get('/', (req, res) => {
 app.get('/music', async (req, res) => {
     let allMusic = await Music.findAll()
     res.json(allMusic)
+})
+
+app.get('/users', async (req, res) => {
+    let allUsers = await User.findAll()
+    res.json(allUsers)
 })
 
 
