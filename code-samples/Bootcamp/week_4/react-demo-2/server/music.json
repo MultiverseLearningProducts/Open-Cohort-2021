@@ -1,0 +1,9 @@
+{
+    "data": [
+        {"name": "Mr. Brightside by: The Killers", "genre": "Rock"},
+        {"name": "Slide by: The goo goo dolls", "genre": "Rock"},
+        {"name": "Rockstar by Post Malone", "genre": "Rap"},
+        {"name": "Simple and Clean by: Utada Hikaru", "genre": "Pop"},
+        {"name": "Chasing Payments by: Adele", "genre": "Pop"}      
+    ]
+}
