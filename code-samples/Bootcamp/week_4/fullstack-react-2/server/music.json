@@ -1,0 +1,11 @@
+{
+    "data": [
+
+        {"name": "Mr. Brightside by: The Killers", "genre": "Rock", "imgURL": "https://upload.wikimedia.org/wikipedia/en/d/d1/Mr.-Brightside.jpg"},
+        {"name": "Slide by: The goo goo dolls", "genre": "Rock", "imgURL": "https://upload.wikimedia.org/wikipedia/en/thumb/7/71/Goo_Goo_Dolls_-_First_Release_Mercenary.jpg/220px-Goo_Goo_Dolls_-_First_Release_Mercenary.jpg"},
+        {"name": "Rockstar by Post Malone", "genre": "Rap", "imgURL": "https://upload.wikimedia.org/wikipedia/en/7/72/Stoneyalbum.jpg"},
+        {"name": "Simple and Clean by: Utada Hikaru", "genre": "Pop", "imgURL": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Hikaru_Utada_-_Ultra_Blue.png/220px-Hikaru_Utada_-_Ultra_Blue.png"},
+        {"name": "Chasing Payments by: Adele", "genre": "Pop", "imgURL": "https://i.pinimg.com/originals/a9/95/9c/a9959c17c8260650136fdc4a7d8bb218.jpg"}      
+        
+    ]
+}
