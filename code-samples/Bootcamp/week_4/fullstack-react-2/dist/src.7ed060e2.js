@@ -29606,8 +29606,10 @@ function Songs() {
   (0, _react.useEffect)(() => {
     fetchMusic(); // music = [{imgURL: '/'},{},{},{},{}]
   }, []);
-  return /*#__PURE__*/_react.default.createElement("div", null, music.map(song => {
-    return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("img", {
+  return /*#__PURE__*/_react.default.createElement("div", null, music.map((song, id) => {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: id
+    }, /*#__PURE__*/_react.default.createElement("img", {
       src: song.imgURL,
       alt: ""
     }), /*#__PURE__*/_react.default.createElement("p", null, song.name));
@@ -29615,47 +29617,6 @@ function Songs() {
 }
 
 var _default = Songs;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"../src/Users.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireWildcard(require("react"));
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function Users() {
-  //storage -> react hook
-  //param 1 'storage' -> 'state'
-  //param 2 'update your storage' -> 'update your state'
-  const [users, setUsers] = (0, _react.useState)([]); //define a function that will make a fetch request to our database
-
-  async function fetchUsers() {
-    try {
-      const response = await fetch(`http://localhost:3000/users`);
-      const responseJSON = await response.json();
-      setUsers(responseJSON);
-    } catch (err) {
-      console.error(err);
-    }
-  } //useEffect
-
-
-  (0, _react.useEffect)(() => {
-    fetchUsers();
-  }, []);
-  return /*#__PURE__*/_react.default.createElement("div", null, users.map(user => {
-    return /*#__PURE__*/_react.default.createElement("h3", null, user.name);
-  }));
-}
-
-var _default = Users;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js"}],"../node_modules/react-router/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":[function(require,module,exports) {
 "use strict";
@@ -34277,7 +34238,94 @@ if ("development" !== "production") {
     style: _propTypes.default.oneOfType([_propTypes.default.object, _propTypes.default.func])
   });
 }
-},{"react-router":"../node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/react-router-dom/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/react-router-dom/node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/react-router-dom/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"../src/Routes.js":[function(require,module,exports) {
+},{"react-router":"../node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/react-router-dom/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/react-router-dom/node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/react-router-dom/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"../src/Users.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function Users() {
+  //storage -> react hook
+  //param 1 'storage' -> 'state'
+  //param 2 'update your storage' -> 'update your state'
+  const [users, setUsers] = (0, _react.useState)([]); //define a function that will make a fetch request to our database
+
+  async function fetchUsers() {
+    try {
+      const response = await fetch(`http://localhost:3000/users`);
+      const responseJSON = await response.json();
+      setUsers(responseJSON);
+    } catch (err) {
+      console.error(err);
+    }
+  } //useEffect
+
+
+  (0, _react.useEffect)(() => {
+    fetchUsers();
+  }, []);
+  return /*#__PURE__*/_react.default.createElement("div", null, users.map((user, id) => {
+    return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      key: id + 1,
+      to: `/users/${id + 1}`
+    }, /*#__PURE__*/_react.default.createElement("li", null, user.name)));
+  }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: `/newUser`
+  }, /*#__PURE__*/_react.default.createElement("button", null, "Add New User")));
+}
+
+var _default = Users;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"../src/User.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function User(props) {
+  //props
+  let requestURL = props.match.params.id;
+  const [user, setUser] = (0, _react.useState)({}); //define a function that will make a fetch request to our database
+
+  async function fetchUser() {
+    try {
+      const response = await fetch(`http://localhost:3000/users/${requestURL}`);
+      const responseJSON = await response.json();
+      setUser(responseJSON);
+    } catch (err) {
+      console.error(err);
+    }
+  } //useEffect
+
+
+  (0, _react.useEffect)(() => {
+    fetchUser();
+  }, []);
+  console.log('OUR UUUUSEERRR', user);
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, user.name));
+}
+
+var _default = User;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"../src/Routes.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34290,6 +34338,10 @@ var _react = _interopRequireDefault(require("react"));
 var _Songs = _interopRequireDefault(require("./Songs"));
 
 var _Users = _interopRequireDefault(require("./Users"));
+
+var _User = _interopRequireDefault(require("./User"));
+
+var _ = _interopRequireDefault(require("./"));
 
 var _reactRouterDom = require("react-router-dom");
 
@@ -34306,14 +34358,23 @@ function Routes() {
     path: "/music",
     component: _Songs.default
   }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
     path: "/users",
     component: _Users.default
+  }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
+    path: "/users/:id",
+    component: _User.default
+  }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
+    path: "/newUser",
+    component: _.default
   })));
 }
 
 var _default = Routes;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Songs":"../src/Songs.js","./Users":"../src/Users.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"../src/App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Songs":"../src/Songs.js","./Users":"../src/Users.js","./User":"../src/User.js","./":"../src/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"../src/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34377,7 +34438,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51824" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59188" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

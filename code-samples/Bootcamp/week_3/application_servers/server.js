@@ -7,7 +7,7 @@ const PORT = 3000
 //import seed function
 const seed = require('./seed')
 const { db } = require('./db') //import our db
-const { Music } = require('./models/index') // import our associated model 
+const { Music, User } = require('./models/index') // import our associated model 
 
 //start the server, we run the seed function to generate data into our database
 seed()

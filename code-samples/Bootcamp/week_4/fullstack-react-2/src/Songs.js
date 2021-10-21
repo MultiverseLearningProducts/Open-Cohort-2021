@@ -31,9 +31,9 @@ function Songs() {
 
     return(
         <div>
-           {music.map((song) => {
+           {music.map((song, id) => {
                return(
-                   <div>
+                   <div key={id}>
                    <img src={song.imgURL} alt="" />
                    <p>{song.name}</p>
                    </div>

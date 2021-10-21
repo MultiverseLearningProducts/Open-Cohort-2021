@@ -3,6 +3,8 @@ import React from 'react'
 //import your components
 import Songs from './Songs'
 import Users from './Users'
+import User from './User'
+import NewUser from './NewUser'
 
 //import react-dom-router dependencies 
 import {
@@ -22,7 +24,9 @@ function Routes() {
                 {/* Defining the switches, render the matching components */}
                 <Switch>
                     <Route path="/music" component={Songs} />
-                    <Route path="/users" component={Users} />
+                    <Route exact path="/users" component={Users} />
+                    <Route exact path="/users/:id" component={User} />
+                    <Route exact path="/newUser" component={NewUser} />
                 </Switch>
         </Router>
     )

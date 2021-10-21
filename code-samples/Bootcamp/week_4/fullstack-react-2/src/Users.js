@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import {Link} from 'react-router-dom'
 
 
 function Users() {
@@ -18,6 +19,17 @@ function Users() {
         }
     }
 
+    function deleteUser(id) {
+        try {
+            const response = await fetch(`http://localhost:3000/users/${id}`, {
+                method: 'DELETE'
+            })
+            await response.json() 
+        } catch (err) {
+            console.error(err)
+        }
+    }
+
     //useEffect
     useEffect( () => {
         fetchUsers()
@@ -25,9 +37,20 @@ function Users() {
 
     return (
         <div>
-            {users.map((user) => {
-                return <h3>{user.name}</h3>
+            {users.map((user,id) => {
+                return (
+                    <div>
+                        <Link key={id+1} to={`/users/${id+1}`}>
+                            <li>{user.name}</li>
+                        </Link>
+                    {/* add a Delete button here and trigger the delete user function~ */}
+                    </div>
+                ) 
             })}
+
+            <Link to={`/newUser`}>
+                <button>Add New User</button>
+            </Link>
         </div>
     )
 }

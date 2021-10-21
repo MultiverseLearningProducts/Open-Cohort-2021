@@ -30,10 +30,31 @@ app.get('/music', async (req, res) => {
     res.json(allMusic)
 })
 
+app.get('/music/:id', async (req, res) => {
+    let allMusic = await Music.findAll()
+    res.json(allMusic)
+})
+
 app.get('/users', async (req, res) => {
     let allUsers = await User.findAll()
     res.json(allUsers)
 })
+
+app.get('/users/:id', async (req, res) => {
+    let id = req.params.id
+    let user = await User.findByPk(id)
+    res.json(user)
+})
+
+
+//add a post route
+
+
+//add a put route
+
+
+//add a delete route
+
 
 
 //*************** ROUTES ******************//
