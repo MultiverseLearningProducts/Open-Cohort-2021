@@ -19,7 +19,7 @@ function Users() {
         }
     }
 
-    function deleteUser(id) {
+    async function deleteUser(id) {
         try {
             const response = await fetch(`http://localhost:3000/users/${id}`, {
                 method: 'DELETE'
