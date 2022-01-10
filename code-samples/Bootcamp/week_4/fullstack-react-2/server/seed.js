@@ -17,7 +17,6 @@ const seed = async () => {
     //hold the name of our path to the music json file
     //path.join() <-helps us find the name of our file recursively
     const seedPath = path.join(__dirname, 'music.json')
-    const seedPath2 = path.join(__dirname, 'user.json')
 
     //need to first read the file, convert the information in the file from a JSON Object into a JS Object
     const buffer = await fs.readFile(seedPath)
