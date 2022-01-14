@@ -16,7 +16,7 @@ const seed = async () => {
     const seedPath = path.join(__dirname, 'music.json'); //get the path to music.json file
     ///Users/lindaeng/Desktop/Open-Cohort-2021/code-samples/Bootcamp/week_3/application_servers/music.json
 
-    const buffer = await fs.readFile(seedPath); //buffer b/c fs doesn't know what data it's reading
+    const buffer = await fs.readFile(seedPath); //asynchronously reads the content in this file
     const {data} = JSON.parse(String(buffer)); // First we convert the data from buffer into a string, then we parse the JSON so it converts from string -> object
 
     const musicPromises = data.map(music => Music.create(music)); //creates music and puts it into our Music table
