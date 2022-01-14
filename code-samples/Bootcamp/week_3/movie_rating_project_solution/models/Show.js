@@ -9,7 +9,7 @@ class Show extends Model {
 Show.init({
 
     title: DataTypes.STRING,
-    genre: DataTypes.STRING,
+    genre: DataTypes.ENUM("Comedy", "Drama", "Horror", "Sitcom"),
     rating: DataTypes.INTEGER,
     status: DataTypes.STRING,
 
