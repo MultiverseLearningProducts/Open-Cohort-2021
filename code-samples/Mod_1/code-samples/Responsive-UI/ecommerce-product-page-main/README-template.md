@@ -1,5 +1,3 @@
-# Frontend Mentor - E-commerce product page solution
-
 ## Table of contents
 
 - [Overview](#overview)
