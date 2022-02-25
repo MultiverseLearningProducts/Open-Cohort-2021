@@ -5,42 +5,38 @@ import './App.css';
 
 function App() {
 
-  console.log('THIS IS DATA FROM THE APP COMPONENT ======', data)
+
 //pass information from the parent -> child
 //pass down props from parent to child
 //props -> arbrituary label
 
 
-  // const [cart, setCart] = useState(data.cart)
-  // const [cartStatus, setStatus] = useState({})
+  const [cart, setCart] = useState(data.cart)
+  const [cartStatus, setStatus] = useState({})
 
 
-  // const addToCart = (product) => {
-  //     setCart([...cart, product])
-  // }
+  const addToCart = (product) => {
+      setCart([...cart, product])
+  }
 
-  // const removeFromCart = (product) => {
-  //   setCart(cart.filter(item => item !== product))
-  // }
+  const removeFromCart = (product) => {
+    setCart(cart.filter(item => item !== product))
+  }
 
-  // const setCartStatus = (key) => {
-  //   setStatus({...cartStatus, [key]: !cartStatus[key]})
-  //   console.log('THIS IS CART STATUS', cartStatus)
-  // }
+  const setCartStatus = (key) => {
+    setStatus({...cartStatus, [key]: !cartStatus[key]})
+    console.log('THIS IS CART STATUS', cartStatus)
+  }
+
 
   return (
     <div className="App">
-      {
-        data.products.map((product) => {
-          return <Product product={product}/>
-        })
-      }
-      {/* {data.products.map((product) => 
+      {data.products.map((product) => 
         <Product key={product.productId} id={product.productId} product={product} addToCart={addToCart} 
         removeFromCart={removeFromCart} setCartStatus={setCartStatus} cartStatus={cartStatus[product.productId]} />
       )
       }
-      <p>Items in cart {cart.length}</p> */}
+      <p>Items in cart {cart.length}</p>
     </div>
   );
 }
