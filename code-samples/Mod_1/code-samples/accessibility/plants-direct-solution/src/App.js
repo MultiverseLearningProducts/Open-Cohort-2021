@@ -11,7 +11,7 @@ function App() {
 //props -> arbrituary label
 
 
-  const [cart, setCart] = useState(data.cart)
+  const [cart, setCart] = useState(data.cart) 
   const [cartStatus, setStatus] = useState({})
 
 
@@ -43,6 +43,12 @@ function App() {
 
 export default App;
 
-//we need to give each child component access to the image file ?? [x]
-// give each child component access to features.[x]
-// link stylesheet [x]
+//1. The mechanics behind adding and removing from cart [x]
+  //1.a: best practices when dealing with passing down props between parent component and child components. [ ]
+//2. How to render the add to cart and remove from cart toggle button [x]
+//3. How to represent the items in the cart [x]
+
+
+// parent[x] -> child
+// ...passing props down to the child component
+//

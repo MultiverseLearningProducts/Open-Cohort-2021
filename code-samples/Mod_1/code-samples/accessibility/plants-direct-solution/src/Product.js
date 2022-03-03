@@ -12,7 +12,7 @@ export const Product = (props) => {
     //     render each message as a list element
     // images - array ->
 
-
+    console.log('THIS IS PROPS FROM THE CHILD COMPONENT PRODUCT ====', props)
     
     return (
         <article className="product">
