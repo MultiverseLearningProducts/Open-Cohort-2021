@@ -4,11 +4,15 @@ PROJECT DESCRIPTION
 
 ## Competencies
 
-Add the job code and outcome 
+Add the job codes and outcome 
 ex: 
 
 #JF 1.1
 - Knows all stages of the software development life cycle (what each stage contains, including the inputs and outputs
+
+...etc
+
+- Write a few sentences proving how this project is aligning to this competency.
 
 ## Table of contents
 
