@@ -26,11 +26,11 @@ npm install
 [Unit 6 End Of Bootcamp Group Project](). 
 
 ## Mod-1
-[Unit 1 Agile user requirements](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/NDIxMzY0NDQ5NTg2/details)
-[Unit 2 Designing UI](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/NDQ4Njg3NzQ1Njg4/details)
-[Unit 3 Building UI with React](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/NDU1NzA1NjUxMTEx/details)
-[Unit 4 Accessibility](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/NDYyMjEyMjg2NjY5/details)
-[Unit 5 End to end testing](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/MjI4MTA4NDE4NjY3/details)
+[Unit 1 Agile user requirements](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/NDIxMzY0NDQ5NTg2/details)  
+[Unit 2 Designing UI](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/NDQ4Njg3NzQ1Njg4/details)  
+[Unit 3 Building UI with React](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/NDU1NzA1NjUxMTEx/details)  
+[Unit 4 Accessibility](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/NDYyMjEyMjg2NjY5/details)  
+[Unit 5 End to end testing](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/MjI4MTA4NDE4NjY3/details)  
 
 ## Mod-2
 
