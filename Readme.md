@@ -4,10 +4,10 @@ This is the repo where you will find sample code from our assignments throughout
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+If you want to run any code sample projects, make sure you npm install!
 
 ```bash
-pip install foobar
+npm install
 ```
 
 ## Important Links
@@ -26,11 +26,11 @@ pip install foobar
 [Unit 6 End Of Bootcamp Group Project](). 
 
 ## Mod-1
-[Unit 1 Agile user requirements]()
-[Unit 2 Designing UI]()
-[Unit 3 Building UI with React]()
-[Unit 4 Accessibility]()
-[Unit 5 End to end testing]()
+[Unit 1 Agile user requirements](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/NDIxMzY0NDQ5NTg2/details)
+[Unit 2 Designing UI](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/NDQ4Njg3NzQ1Njg4/details)
+[Unit 3 Building UI with React](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/NDU1NzA1NjUxMTEx/details)
+[Unit 4 Accessibility](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/NDYyMjEyMjg2NjY5/details)
+[Unit 5 End to end testing](https://classroom.google.com/c/Mzc3MTExOTI4NjYy/a/MjI4MTA4NDE4NjY3/details)
 
 ## Mod-2
 
