@@ -15,6 +15,7 @@ npm install
 [Progress Review Outline](https://docs.google.com/document/d/1PvL5uCRKBm_zrX_MtpwAqmJApt4LqNy-jlDd7RWxyLc/edit?usp=sharing)
 [Multiverse Curriculum](https://docs.google.com/document/d/1Is4RZT-r67YMA8vDy5b4_Jxrjscslg27QOcMzI4nsPY/edit?usp=sharing)   
 [Department of Labor documents](https://docs.google.com/spreadsheets/d/1irpDiHfRXeVrgMLbRQVY54EV0F6dFMAoOopwlaWKH-Y/edit?usp=sharing)
+[Readme Template](https://github.com/MultiverseLearningProducts/Open-Cohort-2021/blob/main/code-samples/Mod_1/code-samples/example_readme.md)
 
 ## Bootcamp
 
